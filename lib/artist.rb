@@ -7,6 +7,12 @@ class Artist
     @name = name 
     @songs = []
     @@all << self 
+  end
+  
+  def self.count 
+    counter = 0 
+    @@all.each {|artist| counter += artist.songs.length}
+    counter 
   end 
   
   def add_song(song)
