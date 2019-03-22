@@ -9,7 +9,7 @@ class Artist
     @@all << self 
   end
   
-  def self.count 
+  def self.song_count 
     counter = 0 
     @@all.each {|artist| counter += artist.songs.length}
     counter 
